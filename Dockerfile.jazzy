@@ -11,6 +11,7 @@ RUN source /etc/os-release \
 RUN apt-get update \
     && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
         git \
+        nano \
         build-essential \
         python3-colcon-common-extensions \
         python3-rosdep \
