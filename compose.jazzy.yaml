@@ -7,8 +7,9 @@ services:
     build:
       context: .
       dockerfile: Dockerfile.jazzy
-    
+      
     network_mode: host
+    ipc: host
 
     stdin_open: true
     tty: true
@@ -30,6 +31,7 @@ services:
       - viz
     
     network_mode: host
+    ipc: host
 
     stdin_open: true
     tty: true
@@ -46,3 +48,22 @@ services:
     
     working_dir: /workspace
     command: ["bash", "-lc", "source /opt/ros/jazzy/setup.bash && rviz2"]
+  
+  zed:
+    image: semantic-layer:zed-wrapper
+
+    runtime: nvidia
+    privileged: true
+    network_mode: host
+    ipc: host
+
+    environment:
+      ROS_DOMAIN_ID: "42"
+      ROS_AUTOMATIC_DISCOVERY_RANGE: LOCALHOST
+      NVIDIA_DRIVER_CAPABILITIES: all
+    
+    volumes:
+      - ./data/zed/resources:/usr/local/zed/resources
+      - ./data/zed/settings:/usr/local/zed/settings
+    
+    command: ["/bin/bash", "-c", "export ROS_DOMAIN_ID=42; export ROS_AUTOMATIC_DISCOVERY_RANGE=LOCALHOST; exec ros2 launch zed_wrapper zed_camera.launch.py camera_model:=zedm"]

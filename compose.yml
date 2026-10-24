@@ -1,7 +1,7 @@
 name: semantic-layer
 
 services:
-  semantic-layer:
+  zed-sdk:
     image: semantic-layer:zed-baseline
 
     build:
@@ -11,15 +11,15 @@ services:
     runtime: nvidia
     privileged: true
     network_mode: host
+    ipc: host
 
     stdin_open: true
     tty: true
-
-    working_dir: /workspace
-    command: ["/bin/bash"]
 
     volumes:
       - ./workspace:/workspace
       - ./data/zed/resources:/usr/local/zed/resources
       - ./data/zed/settings:/usr/local/zed/settings
     
+    working_dir: /workspace
+    command: ["bash", "-lc", "tail -f /dev/null"]
