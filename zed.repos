@@ -1,0 +1,45 @@
+repositories:
+  angles:
+    type: git
+    url: https://github.com/ros/angles.git
+    version: a96224f9ab3ac51fe8fd981c1e1554528dc4345a
+  backward_ros:
+    type: git
+    url: https://github.com/pal-robotics/backward_ros.git
+    version: 3c71c9f184223f885459ad67a223eb36a5ca347f
+  diagnostics:
+    type: git
+    url: https://github.com/ros/diagnostics.git
+    version: 81b53fad4dfdd5169d7db4aa77b60602e4b46d86
+  geographic_info:
+    type: git
+    url: https://github.com/ros-geographic-info/geographic_info.git
+    version: f70b81a438172cd7a066dc1b18314d70e0eb6389
+  image_transport_plugins:
+    type: git
+    url: https://github.com/ros-perception/image_transport_plugins.git
+    version: 4ea32edbf7b9c70a655be5e2f41cc5d7bae5ef5a
+  nmea_msgs:
+    type: git
+    url: https://github.com/ros-drivers/nmea_msgs.git
+    version: b57ff6364bde239c78f6e2ab89727ca8c0fbc1f0
+  robot_localization:
+    type: git
+    url: https://github.com/cra-ros-pkg/robot_localization.git
+    version: 3efa714fb9c1ff40966327b7bed7053b2570be4d
+  vision_opencv:
+    type: git
+    url: https://github.com/ros-perception/vision_opencv.git
+    version: 50f6f1feccc65dd2ef87f863cb812a8aa0789062
+  xacro:
+    type: git
+    url: https://github.com/ros/xacro.git
+    version: da4b3849f8320903d625250089f67f0632be86f2
+  zed-ros2-description:
+    type: git
+    url: https://github.com/stereolabs/zed-ros2-description.git
+    version: 22468247c1653d08a1e213809f3e9ce76291487d
+  zed-ros2-interfaces:
+    type: git
+    url: https://github.com/stereolabs/zed-ros2-interfaces.git
+    version: 3ecc131be336e64f697abf70389334bae675e30e

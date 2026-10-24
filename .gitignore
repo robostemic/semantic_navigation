@@ -3,6 +3,7 @@
 /workspace/build/
 /workspace/install/
 /workspace/log/
+/workspace/src/zed-ros2-wrapper
 
 __pycache__/
 *.py[cod]
