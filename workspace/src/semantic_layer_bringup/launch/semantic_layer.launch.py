@@ -1,7 +1,0 @@
-from launch import LaunchDescription
-from launch.actions import LogInfo
-
-def generate_launch_description():
-    return LaunchDescription([
-        LogInfo(msg="semantic_layer_bringup launch is running"),
-    ])
